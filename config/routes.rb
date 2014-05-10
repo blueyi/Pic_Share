@@ -1,7 +1,13 @@
 PicShare::Application.routes.draw do
-  get "base_pages/home"
-  get "base_pages/help"
-  get "base_pages/about"
+  # get 'users/new'
+  resources :users
+
+  root to: 'base_pages#home'
+  match '/signup',	to: 'users#new',		  via: 'get'
+  match '/help',	to: 'base_pages#help',	  via: 'get'
+  match '/about',	to: 'base_pages#about',	  via: 'get'
+  match '/contact',	to: 'base_pages#contact', via: 'get'
+  match '/feedback', to: 'base_pages#feedback',via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
