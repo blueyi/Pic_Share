@@ -1,4 +1,4 @@
-source 'https://ruby.taobao.org/'
+source 'https://rubygems.org/'
 # ruby '2.0.0-p451'
 #ruby-gemset=Pic_Share
 
