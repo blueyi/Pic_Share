@@ -6,9 +6,13 @@
   <%= @album.title %>
 <p>
 
-<% @album_pics.each do |p| %>
-  <%= image_tag p.pic_url %>
-<% end %>
+<%= will_paginate @pics %>
+<ul>
+<%= render @album_pics %>
+</ul>
+<%= will_paginate @pics %>
+
+<br>
 <p>
   <%= @album.content %>
 </p>

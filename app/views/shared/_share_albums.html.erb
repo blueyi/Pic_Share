@@ -1,0 +1,10 @@
+<% @shared.each do |a| %>
+  <% if a.album_pics.any? %>
+	<span class="shared-albums">
+	  <h3><%= a.title %></h3><br>
+	  <a href="<%= album_path(a.id) %>" >
+		<%= image_tag a.album_pics[0].pic_url, height: "300"%>
+	  </a>
+	</span>
+  <% end %>
+<% end %>

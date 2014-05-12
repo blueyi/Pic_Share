@@ -1,8 +1,23 @@
 <li>
-<h3><%= album.title %></h3><br>
-<%#= image_tag album.album_pics.pic_url %>
-<span class="content"><%= album.content %></span>
-<span class="timestamp">
-  Shared <%= time_ago_in_words(album.created_at) %> ago.
-</span>
+<table>
+  <tr>
+	<td class="album_small">
+
+	  <% if album.album_pics.any? %>
+		<h3><%= album.title %></h3><br>
+		<a href="<%=album_path(album.id)%>">
+		  <%= image_tag album.album_pics[0].pic_url, size: "200"%>
+		</a>
+	  <% end %>
+
+	</td>
+
+	<td>
+	  <span class="content"><%= album.content %></span><br>
+	  <span class="timestamp">
+		<%= album.album_pics.count %> picture shared <%= time_ago_in_words(album.created_at) %> ago.
+	  </span>
+	</td>
+  </tr>
+</table>
 </li>

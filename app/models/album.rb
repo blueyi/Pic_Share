@@ -1,4 +1,6 @@
+require 'will_paginate/array'
 class Album < ActiveRecord::Base
+  WillPaginate.per_page = 5
   belongs_to :user
   has_many :album_pics
   accepts_nested_attributes_for :album_pics

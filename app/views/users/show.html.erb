@@ -8,13 +8,17 @@
 		<%= @user.email %>
 	  </h1>
 	</section>
+	<section>
+	  <%= link_to "Share your Picture", albums_new_path %>
+	</section>
   </aside>
   <div class="span8">
 	<% if @user.albums.any? %>
 	  <h3>You have <%= @user.albums.count %> albums</h3>
-	  <ol class="albums">
+	  <%= will_paginate @albums %>
+	  <ul class="albums">
 		<%= render @albums %>
-	  </ol>
+	  </ul>
 	  <%= will_paginate @albums %>
 	<% end %>
   </div>

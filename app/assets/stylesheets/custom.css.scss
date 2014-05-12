@@ -60,6 +60,20 @@ p {
   line-height: 1.7em;
 }
 
+.big-font {
+  font-size: 3em;
+}
+
+.shared-albums {
+  float: left;
+  width: 400px;
+  height: 300px;
+  margin: 5px;
+  padding: 10px;
+}
+
+
+
 /* header */
 #logo {
   float: left;
@@ -177,23 +191,33 @@ input {
   list-style: none;
   margin: 10px 0 0 0;
   li {
-	padding: 10px 0;
+	float: left;
+	padding: 10px 0 0 0;
 	border-top: 1px solid #e8e8e8;
   }
 }
 
 .content {
   desplay: block;
+  font-size: 1.5em;
 }
 
 .timestamp {
   color: $grayLight;
+  font-size: 1.3em;
 }
 
 .gravatar {
   folat: left;
   margin-right: 10px;
 }
+
+.album_small {
+  width: 200px;
+  margin-right: 10px;
+}
+
+
 
 aside {
   textarea {
