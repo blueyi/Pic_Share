@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :albums, dependent: :destroy
 
   WillPaginate.per_page = 10
 

@@ -1,8 +1,17 @@
 PicShare::Application.routes.draw do
-
-devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => 'signup'}
-  # get 'users/new'
   resources :users
+  resources :albums
+  resources :album_pics
+
+  get "album_pics/new"
+  get "album_pics/create"
+  get "album_pics/show"
+  get "album_pics/destroy"
+  get "albums/new"
+  get "albums/show"
+  get "albums/create"
+  get "albums/destroy"
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => 'signup'}
 
   root to: 'base_pages#home'
   match '/help',	to: 'base_pages#help',	  via: 'get'

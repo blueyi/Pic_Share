@@ -9,4 +9,13 @@
 	  </h1>
 	</section>
   </aside>
+  <div class="span8">
+	<% if @user.albums.any? %>
+	  <h3>You have <%= @user.albums.count %> albums</h3>
+	  <ol class="albums">
+		<%= render @albums %>
+	  </ol>
+	  <%= will_paginate @albums %>
+	<% end %>
+  </div>
 </div>

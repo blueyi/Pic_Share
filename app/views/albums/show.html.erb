@@ -1,0 +1,17 @@
+<% provide(:title, 'Album') %>
+
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Album title:</strong>
+  <%= @album.title %>
+<p>
+
+<% @album_pics.each do |p| %>
+  <%= image_tag p.pic_url %>
+<% end %>
+<p>
+  <%= @album.content %>
+</p>
+
+<%= link_to 'Back', current_user %>
+

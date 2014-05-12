@@ -1,0 +1,8 @@
+<li>
+<h3><%= album.title %></h3><br>
+<%#= image_tag album.album_pics.pic_url %>
+<span class="content"><%= album.content %></span>
+<span class="timestamp">
+  Shared <%= time_ago_in_words(album.created_at) %> ago.
+</span>
+</li>
